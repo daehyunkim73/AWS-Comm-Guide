@@ -1,0 +1,33 @@
+sudo ln -s /etc/nginx/sites-available/react_front.conf /etc/nginx/sites-enabled/react_front.conf
+sudo ln -s /etc/nginx/sites-available/node_backend.conf /etc/nginx/sites-enabled/node_backend.conf
+
+systemctl status nginx
+systemctl start nginx
+
+fuser -k 80/tcp
+lsof -i :80
+kill -9 53623
+netstat -anp | grep 80
+
+pm2 stop all
+pm2 kill
+pm2 list
+
+service apache2 stop
+service apache2 start
+
+sudo pm2 serve build/ 80 --name "react-front"
+sudo pm2 start index.js
+sudo pm2 start /home/ubuntu/react-redux-login-regist-jwt-api/index.js
+
+/home/ubuntu/react-redux-login-regist-jwt-api
+const IMG_URL = "http://api.manhattansky73.net/images";
+
+npm run build && pm2 reload all
+pm2 monit
+
+sudo claudia create --handler index.handler --deploy-proxy-api --region ap-northeast-2 --use-s3-bucket grandskywind
+
+미동부-오하이오
+
+

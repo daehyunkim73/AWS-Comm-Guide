@@ -1,0 +1,8 @@
+mysql> CREATE USER 'root'@'%' IDENTIFIED BY 'sysadm@#rc73';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> flush privileges;
+Query OK, 0 rows affected (0.01 sec)

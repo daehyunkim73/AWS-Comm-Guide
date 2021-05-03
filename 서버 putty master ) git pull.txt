@@ -1,0 +1,70 @@
+Using username "root".
+Authenticating with public key "jerome"
+Welcome to Ubuntu 16.04.5 LTS (GNU/Linux 4.4.0-131-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ÆÐÅ°Áö 37°³¸¦  ¾÷µ¥ÀÌÆ®ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+30 ¾÷µ¥ÀÌÆ®´Â º¸¾È ¾÷µ¥ÀÌÆ®ÀÔ´Ï´Ù.
+
+
+*** ½Ã½ºÅÛÀ» ´Ù½Ã ½ÃÀÛÇØ¾ß ÇÕ´Ï´Ù ***
+Last login: Mon Feb 11 13:12:12 2019 from 223.62.8.78
+ ? root@ubuntu þó ~ þó mytask
+ ? root@ubuntu þó /var/www þó ll
+total 12
+drwxr-xr-x  3 root root 4096  2¿ù 11 12:35 .
+drwxr-xr-x 14 root root 4096  1¿ù  9 10:50 ..
+drwxr-xr-x  3 root root 4096  2¿ù 11 12:44 dev
+ ? root@ubuntu þó /var/www þó cd dev
+ ? root@ubuntu þó /var/www/dev þó ll
+total 12
+drwxr-xr-x 3 root root 4096  2¿ù 11 12:44 .
+drwxr-xr-x 3 root root 4096  2¿ù 11 12:35 ..
+drwxr-xr-x 9 root root 4096  2¿ù 11 12:37 mp_back
+ ? root@ubuntu þó /var/www/dev þó cd mp_back
+ ? root@ubuntu þó /var/www/dev/mp_back þó þã master þó ll
+total 60
+drwxr-xr-x  9 root root  4096  2¿ù 11 12:37 .
+drwxr-xr-x  3 root root  4096  2¿ù 11 12:44 ..
+drwxr-xr-x  8 root root  4096  2¿ù 12 16:22 .git
+-rw-r--r--  1 root root   194  2¿ù 11 12:37 .gitignore
+-rwxr-xr-x  1 root root   242  2¿ù 11 12:37 .htaccess
+drwxr-xr-x 14 root root  4096  2¿ù 11 12:41 application
+drwxr-xr-x  9 root root  4096  2¿ù 11 12:37 assets
+-rwxr-xr-x  1 root root   311  2¿ù 11 12:37 cli.php
+-rwxr-xr-x  1 root root 11263  2¿ù 11 12:37 index.php
+drwxr-xr-x  2 root root  4096  2¿ù 11 12:37 socket
+drwxr-xr-x 11 root root  4096  2¿ù 11 12:37 static
+drwxr-xr-x  8 root root  4096  2¿ù 11 12:37 system
+drwxrwxrwx  3 root root  4096  2¿ù 11 12:37 uploads
+ ? root@ubuntu þó /var/www/dev/mp_back þó þã master þó git pull
+remote: Counting objects: 22, done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 22 (delta 12), reused 0 (delta 0)
+Unpacking objects: 100% (22/22), done.
+From https://bitbucket.org/plan0501/mp
+   2a5d465..b005ca5  master     -> origin/master
+Updating 2a5d465..b005ca5
+Fast-forward
+ application/controllers/crm/Hosptl.php      |  975 ++++++++++++++++++++++++
+ application/controllers/crm/Mbroffice.php   |  844 ---------------------
+ application/helpers/coinapi_helper.php      |    2 +-
+ application/helpers/view_helper.php         |   54 +-
+ application/models/biz/crm/v1/Hosptlbiz.php | 1442 +++++++++++++++++++++++++++++++++++
+ application/views/crm/hosptl/desc.php       | 2517 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ application/views/crm/hosptl/detail.php     |  391 ++++++++++
+ application/views/crm/hosptl/list.php       |  418 ++++++++++
+ application/views/crm/hosptl/reg.php        | 2572 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ application/views/crm/popup/find_addr.php   |    4 +-
+ 10 files changed, 8356 insertions(+), 863 deletions(-)
+ create mode 100644 application/controllers/crm/Hosptl.php
+ delete mode 100755 application/controllers/crm/Mbroffice.php
+ create mode 100644 application/models/biz/crm/v1/Hosptlbiz.php
+ create mode 100644 application/views/crm/hosptl/desc.php
+ create mode 100644 application/views/crm/hosptl/detail.php
+ create mode 100644 application/views/crm/hosptl/list.php
+ create mode 100644 application/views/crm/hosptl/reg.php
+ ? root@ubuntu þó /var/www/dev/mp_back þó þã master þó

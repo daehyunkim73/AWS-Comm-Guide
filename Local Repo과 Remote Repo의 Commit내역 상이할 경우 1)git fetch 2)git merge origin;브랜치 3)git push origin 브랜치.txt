@@ -1,0 +1,185 @@
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c
+$ cd /c/Sysinfo_xyz
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (develop)
+$ ll
+total 33
+drwxr-xr-x 1 manhattansky 197121     0 11월 30 16:31 application/
+drwxr-xr-x 1 manhattansky 197121     0 11월 30 16:32 assets/
+-rw-r--r-- 1 manhattansky 197121   325 11월 30 09:25 cli.php
+-rw-r--r-- 1 manhattansky 197121 11543 11월 30 09:25 index.php
+drwxr-xr-x 1 manhattansky 197121     0 11월 30 16:32 socket/
+drwxr-xr-x 1 manhattansky 197121     0 11월 30 16:32 static/
+drwxr-xr-x 1 manhattansky 197121     0 11월 30 16:32 system/
+drwxr-xr-x 1 manhattansky 197121     0 11월 30 16:32 uploads/
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (develop)
+$ git add --all
+warning: LF will be replaced by CRLF in .idea/workspace.xml.
+The file will have its original line endings in your working directory
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (develop)
+$ git commit -a -m "Test.phhp Edited"
+[develop 3c1fce3] Test.phhp Edited
+ 6 files changed, 286 insertions(+), 6 deletions(-)
+ create mode 100644 .idea/Sysinfo_xyz.iml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 .idea/workspace.xml
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (develop)
+$ git status
+On branch develop
+nothing to commit, working tree clean
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (develop)
+$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git merge develop
+Updating f32a4da..3c1fce3
+Fast-forward
+ .idea/Sysinfo_xyz.iml            |   8 ++
+ .idea/misc.xml                   |   6 +
+ .idea/modules.xml                |   8 ++
+ .idea/vcs.xml                    |   6 +
+ .idea/workspace.xml              | 255 +++++++++++++++++++++++++++++++++++++++
+ application/controllers/Test.php |   9 +-
+ 6 files changed, 286 insertions(+), 6 deletions(-)
+ create mode 100644 .idea/Sysinfo_xyz.iml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 .idea/workspace.xml
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git push origin master
+To https://bitbucket.org/rockclassic/sysinfo_xyz_local.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://rockclassic@bitbucket.org/rockclassic/sysinfo_xyz_local.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git fetch
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git branch -a
+  develop
+* master
+  remotes/origin/master
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git merge
+develop         FETCH_HEAD      HEAD            master          ORIG_HEAD       origin/master
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git merge origin/master
+Auto-merging application/controllers/Test.php
+CONFLICT (content): Merge conflict in application/controllers/Test.php
+Automatic merge failed; fix conflicts and then commit the result.
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master|MERGING)
+$ git diff
+diff --cc application/controllers/Test.php
+index 6d29bbf,c846d90..0000000
+--- a/application/controllers/Test.php
++++ b/application/controllers/Test.php
+@@@ -14,9 -14,11 +14,17 @@@ class Test extends CI_Controller
+
+      } // }}}
+
+++<<<<<<< HEAD
+ +    // gut test4
+ +    // gut test5
+ +    // gut test6
+++=======
++     // gut test1
++     // gut test2
++     // gut test3
++
++
+++>>>>>>> origin/master
+
+
+      // index
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master|MERGING)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   application/controllers/Test.php
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .idea/workspace.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master|MERGING)
+$ git commit -a -m "conflic resolved"
+[master 39b956d] conflic resolved
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)
+$ git push origin master
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 4.49 KiB | 574.00 KiB/s, done.
+Total 18 (delta 10), reused 0 (delta 0)
+To https://bitbucket.org/rockclassic/sysinfo_xyz_local.git
+   3c3ed45..39b956d  master -> master
+
+manhattansky@DESKTOP-NJ1OBCB MINGW64 /c/Sysinfo_xyz (master)

@@ -1,0 +1,9 @@
+npm run build && pm2 reload all
+pm2 monit
+
+npx pm2 kill
+npx pm2 status
+
+sudo npm run build
+sudo npm run start   //error pm2 no execute
+npx pm2 start npm -- start

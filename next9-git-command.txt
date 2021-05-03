@@ -1,0 +1,8 @@
+git remote add origin 'https://github.com/daehyunkim73/next9-frontend.git'
+git remote add origin 'https://github.com/daehyunkim73/next9-backend.git'
+git remote add origin 'https://github.com/daehyunkim73/next9-lambda.git'
+
+git clone -b develop --single-branch 'https://github.com/daehyunkim73/next9-frontend.git'
+git clone -b develop --single-branch 'https://github.com/daehyunkim73/next9-backend.git'
+git clone -b develop --single-branch 'https://github.com/daehyunkim73/next9-lambda.git'
+
